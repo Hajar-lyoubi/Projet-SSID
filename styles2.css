@@ -1,0 +1,108 @@
+/* styles2.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #c9302c;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    margin: 20px;
+}
+
+h2 {
+    color: #333; /* Couleur du texte pour les titres */
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366; /* Couleur de fond pour les en-têtes de colonnes */
+    color: #fff;
+}
+
+.button-edit {
+    background-color: #f0ad4e; /* Orange */
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.button-edit:hover {
+    background-color: #eea236; /* Nuance plus foncée d'orange */
+}
+
+.button-delete {
+    background-color: #d9534f; /* Rouge */
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.button-delete:hover {
+    background-color: #d43f3a; /* Nuance plus foncée de rouge */
+}
+
+.button-add {
+    background-color: #5cb85c; /* Vert */
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    float: right; /* Aligner à droite */
+    margin-top: -30px; /* Ajustement pour le positionnement */
+    transition: background-color 0.3s;
+}
+
+.button-add:hover {
+    background-color: #4cae4c; /* Nuance plus foncée de vert */
+}

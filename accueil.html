@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSID - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            SSID
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="gestion_pompiers.php">Pompiers</a></li>
+                <li><a href="#">Casernes</a></li>
+                <li><a href="#">Interventions</a></li>
+                <li><a href="#">Équipement</a></li>
+                <li><a href="#">Véhicules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <img src="image1.jpg" alt="Pompier 1" id="last-clone">
+        <img src="image2.jpg" alt="Pompier 2">
+        <img src="image3.jpg" alt="Pompier 3">
+        <img src="image4.jpg" alt="Pompier 4">
+        <img src="image5.jpg" alt="Pompier 5">
+        <img src="image2.jpg" alt="Pompier 7">
+        <img src="image3.jpg" alt="Pompier 8">
+        <img src="image1.jpg" alt="Pompier 1" id="first-clone">
+        <!-- Ajoutez d'autres images pour le slider -->
+    </section>
+
+    <section class="content">
+        <h2>Bienvenue sur SSID</h2>
+        <p>SSID est une plateforme de gestion pour les services de pompiers. Elle permet de gérer les pompiers, les casernes, les interventions, l'équipement et les véhicules.</p>
+        <!-- Ajoutez d'autres éléments au besoin -->
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>À propos de SSID</h2>
+                <p>SSID est une plateforme de gestion pour les services de pompiers. Elle permet de gérer les pompiers, les casernes, les interventions, l'équipement et les véhicules.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contactez-nous</h2>
+                <p>Email: info@ssid.com</p>
+                <p>Téléphone: +33 123 456 789</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Liens rapides</h2>
+                <ul>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Assistance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 SSID | Conçu par Hajar Lyoubi, Charlène Mbizi, Nada Belarbi
+        </div>
+    </footer>
+
+ <script>
+        const slider = document.querySelector('.slider');
+        let counter = 1;
+
+        function slide() {
+            slider.style.transition = 'transform 0.5s ease-in-out';
+            counter++;
+            slider.style.transform = 'translateX(' + (-counter * 50) + '%)';
+        }
+
+        function resetSlider() {
+            slider.style.transition = 'transform 0.5s ease-in-out';
+            counter--;
+            slider.style.transform = 'translateX(' + (-counter * 50) + '%)';
+        }
+
+        slider.addEventListener('transitionend', () => {
+            if (slider.children[counter].id === 'last-clone') {
+                slider.style.transition = 'none';
+                counter = slider.children.length - 2;
+                slider.style.transform = 'translateX(' + (-counter * 50) + '%)';
+            }
+
+            if (slider.children[counter].id === 'first-clone') {
+                slider.style.transition = 'none';
+                counter = slider.children.length - counter;
+                slider.style.transform = 'translateX(' + (-counter * 50) + '%)';
+            }
+        });
+
+        setInterval(slide, 3000);  // Change slide every 3 seconds
+    </script>
+
+</body>
+</html>
